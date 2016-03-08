@@ -107,7 +107,8 @@ describe('Parse Reply', () => {
 
       const input = fs
         .readFileSync(__dirname + '/files/' + ff)
-        .toString();
+        .toString()
+        .trim();
 
       const expected = fs
         .readFileSync(__dirname + '/files/' + output)
