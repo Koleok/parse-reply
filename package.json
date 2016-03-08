@@ -51,6 +51,7 @@
     "prepublish": "npm run build",
     "dev": "./node_modules/.bin/webpack -w",
     "test": "./node_modules/mocha/bin/_mocha --compilers js:babel-core/register ./test",
+    "test-debug": "./node_modules/.bin/node-inspector && ./node_modules/mocha/bin/_mocha --compilers js:babel-core/register --debug-brk ./test",
     "test-watch": "./node_modules/mocha/bin/_mocha --compilers js:babel-core/register ./test --watch"
   }
 }

@@ -28,9 +28,8 @@ export default ({
      * @return {Array}              generated regex patterns
      */
     fromPatternArray(fromList, emailRegex) {
-      return
-      _.chain(fromList)
-        .map(fromList, text => container.createFromPatterns(text, emailRegex))
+      return _.chain(fromList)
+        .map(text => container.createFromPatterns(text, emailRegex))
         .flatten()
         .value();
     },
@@ -44,8 +43,7 @@ export default ({
      * @return {Array}            generated regex patterns
      */
     wrotePatternArray(wroteList, onList) {
-      return
-      _.chain(wroteList)
+      return _.chain(wroteList)
         .zip(onList)
         .map(([wrote, on]) => `^${on}[\\s\\S]*${wrote}.*:$`)
         .value();
@@ -85,9 +83,8 @@ export default ({
      * @return {Array}             generated regex patterns
      */
     forwardPatternArray(forwardList) {
-      return
-      _.chain(forwardList)
-        .map(createForwardPatterns)
+      return _.chain(forwardList)
+        .map(container.createForwardPatterns)
         .flatten()
         .value();
     },
