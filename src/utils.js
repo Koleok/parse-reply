@@ -102,4 +102,6 @@ export default ({
       return new RegExp(`(${patterns.join('|')})`, 'im');
     },
   }
+
+  return container;
 }

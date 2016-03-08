@@ -10,7 +10,7 @@ export const simpleEmailRE = simpleEmailPattern;
  * @param  {String} text incoming email string
  * @return {String}      stripped email string
  */
-export function parseReplyPlainText(text) {
+export default function parseReplyPlainText(text) {
   if (!text) return '';
 
   const

@@ -47,4 +47,4 @@ const compilePatterns = ({ froms, on, wrote, forwards }) => {
  * that will not re-compile if the arguments passed to it
  * are the same as the last time it ran
  */
-export default _.memo(compilePatterns);
+export default _.memoize(compilePatterns);

@@ -18,12 +18,10 @@
     "email": "likefallingleaves@gmail.com"
   },
   "main": "./parse.js",
-  "maintainers": [
-    {
-      "name": "Like FallingLeaves",
-      "email": "likefallingleaves@gmail.com"
-    }
-  ],
+  "maintainers": [{
+    "name": "Like FallingLeaves",
+    "email": "likefallingleaves@gmail.com"
+  }],
   "version": "0.0.4",
   "repository": {
     "type": "git",
@@ -49,6 +47,10 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "test": "mocha test/"
+    "build": "./node_modules/.bin/webpack",
+    "prepublish": "npm run build",
+    "dev": "./node_modules/.bin/webpack -w",
+    "test": "./node_modules/mocha/bin/_mocha --compilers js:babel-core/register ./test",
+    "test-watch": "./node_modules/mocha/bin/_mocha --compilers js:babel-core/register ./test --watch"
   }
 }
